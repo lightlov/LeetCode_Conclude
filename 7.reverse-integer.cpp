@@ -36,6 +36,14 @@
  * 假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
  * 
  */
+/*
+method:
+反转整数,可用整除余数乘10进行反转
+判断溢出.当正数大于INT_MAX或者当负数小于INT_MIN时肯定溢出,由于判断后会有res*10+pop.因此
+当res>INT_MAX/10或者res<INT_MIN/10时肯定溢出
+个位数,正整数INT_MAX的个位数为7,因此当res==INT_MAX,且pop>7则溢出
+同理,负整数INT_MIN个位数为8,当res==INT_MIN/10,且pop<-8,则溢出.
+*/
 class Solution {
 public:
     int reverse(int x) {
