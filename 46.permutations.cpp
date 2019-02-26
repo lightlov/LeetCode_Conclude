@@ -1,28 +1,30 @@
 /*
- * @lc app=leetcode id=47 lang=cpp
+ * @lc app=leetcode id=46 lang=cpp
  *
- * [47] Permutations II
+ * [46] Permutations
  *
- * https://leetcode.com/problems/permutations-ii/description/
+ * https://leetcode.com/problems/permutations/description/
  *
  * algorithms
- * Medium (39.06%)
- * Total Accepted:    220K
- * Total Submissions: 563.3K
- * Testcase Example:  '[1,1,2]'
+ * Medium (53.26%)
+ * Total Accepted:    338K
+ * Total Submissions: 634.3K
+ * Testcase Example:  '[1,2,3]'
  *
- * Given a collection of numbers that might contain duplicates, return all
- * possible unique permutations.
+ * Given a collection of distinct integers, return all possible permutations.
  * 
  * Example:
  * 
  * 
- * Input: [1,1,2]
+ * Input: [1,2,3]
  * Output:
  * [
- * ⁠ [1,1,2],
- * ⁠ [1,2,1],
- * ⁠ [2,1,1]
+ * ⁠ [1,2,3],
+ * ⁠ [1,3,2],
+ * ⁠ [2,1,3],
+ * ⁠ [2,3,1],
+ * ⁠ [3,1,2],
+ * ⁠ [3,2,1]
  * ]
  * 
  * 
