@@ -42,7 +42,7 @@ public:
         if(nums.size()==1) return nums[0];
 
         vector<int> sum;
-        int　res=0;
+        int res=0;
         for(int i=0;i<nums.size();i++){
             res+=nums[i];
             sum.push_back(res);
