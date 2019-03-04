@@ -36,6 +36,34 @@
 class Solution {
 public:
     vector<vector<int>> subsets(vector<int>& nums) {
+        vector<int> result;
+        vector<vector<int>> res;
+        if(nums.size()==0) return res;
+       // sort(nums.begin(),nums.end());
+        
+        
+
+        subsets(res,result,nums,0);
+        return res;
+    }
+
+
+private:
+    void subsets(vector<vector<int>>& res,vector<int>& result,vector<int>& nums,int location){
+        res.push_back(result);
+        if(location==nums.size()) return;
+
+        for(int i=location;i<nums.size();i++){
+         //   if(i>0&&nums[i]==nums[i-1]) continue;
+            result.push_back(nums[i]);
+            int temp=nums[i];
+            nums.erase(nums.begin()+i);
+            subsets(res,result,nums,i);
+            result.pop_back();
+            nums.insert(nums.begin()+i,temp);
+        }
+
+
         
     }
 };

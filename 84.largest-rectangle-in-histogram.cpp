@@ -40,7 +40,22 @@
 class Solution {
 public:
     int largestRectangleArea(vector<int>& heights) {
-        
+        int res=0;
+        int x,y;
+        for(int i=0;i<heights.size();i++){
+            for(x=i;x>=0;i--){
+                if(heights[x]<heights[i]) break;
+            }
+
+
+            for(y=i;y<heights,size();y++){
+                if(heights[y]<heights[i]) break;
+            }
+
+            res=max(res,heights[i]*(y-x-1));
+        }
+
+        return res;
     }
 };
 
