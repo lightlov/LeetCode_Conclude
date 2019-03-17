@@ -43,7 +43,101 @@
 class Solution {
 public:
     string originalDigits(string s) {
+        string res;
+        map(char,int) m;
+        for(int i=0;i<s.size();i++){
+            m[s[i]]++;
+        }
+        l=s.szie();
+        while(l>0){
+            if(m['z']>0){
+                res+='0';
+                m['z']--;
+                m['e']--;
+                m['r']--;
+                m['o']--;
+                continue;
+            }
+            if(m['w']>0){
+                res+='2';
+                m['t']--;
+                m['w']--;
+                m['o']--;
+                continue;
+          }
+            if(m['u'>0]){
+                res+='4';
+                m['f']--;
+                m['o']--;
+                m['u']--;
+                m['r']--;
+                continue;
+            }
+            if(m['x']>0;){
+                res+='6';
+                m['s']--;
+                m['i']--;
+                m['x']--;
+                continue;
+            }
+            if(m['g']>0){
+                res+='8';
+                m['e']--;
+                m['i']--;
+                m['g']--;
+                m['h']--;
+                m['t']--;
+                continue;
+            }
+            if(m['f']>0){
+                res+='5';
+                m['f']--;
+                m['i']--;
+                m['v']--;
+                m['e']--;
+                continue;
+            }
+            if(m['r']>0){
+                res+='3';
+                m['t']--;
+                m['h']--;
+                m['r']--;
+                m['e']--;
+                m['e']--;
+                continue;
+            }
+            if(m['s']>0){
+                res+='7';
+                m['s']--;
+                m['e']--;
+                m['v']--;
+                m['e']--;
+                m['n']--;
+                continue;
+
+            }
+            if(m['o']>0){
+                res+='1';
+                m['o']--;
+                m['n']--;
+                m['e']--;
+                continue;
+            }
+            if(m['i']>0){
+                res+='9';
+                m['n']--;
+                m['i']--;
+                m['n']--;
+                m['e']--;
+                continue;
+            }
+
+        }
+        sort(res.begin(),res.end());
+        return res;
         
+
     }
+    
 };
 

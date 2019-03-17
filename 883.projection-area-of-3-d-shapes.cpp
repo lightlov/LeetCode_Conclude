@@ -140,7 +140,24 @@
 class Solution {
 public:
     int projectionArea(vector<vector<int>>& grid) {
-        
+        int top=0;
+        int front=0;
+        int side=0;
+
+        int front_max[50]={0};
+        int side_max[50]={0};
+
+        for(int i=0;i<grid.size();i++){
+            for(int j=0;j<grid[i].size();j++){
+                if(grid[i][j]!=0) top++;
+                front_max[i]=max(front_max[0],grid[i][j]);
+                side_max[j]=max(side_max[j],grid[i][j]);
+            }
+            
+        }
+        front=sum(front_max);
+        side=sum(side_max);
+        return top+front+side;
     }
 };
 
